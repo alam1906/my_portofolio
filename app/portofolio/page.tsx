@@ -7,12 +7,19 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { motion } from "framer-motion";
 
 export default function Portofolio() {
   const elements = ["1", "2", "3", "4", "5", "6", "7"];
   return (
     <>
-      <div className=" mt-5">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 1 }}
+        className=" mt-5"
+      >
         <h1 className="text-4xl font-extrabold text-center mb-10">
           Portofolio
         </h1>
@@ -48,7 +55,7 @@ export default function Portofolio() {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 }
