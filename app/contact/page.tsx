@@ -49,7 +49,7 @@ export default function Contact() {
                 />
               </div>
               <button
-                className="shadow bg-purple-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded-full w-full mt-2"
+                className="shadow bg-blue-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded-full w-full mt-2"
                 type="button"
               >
                 Submit
@@ -71,10 +71,18 @@ export default function Contact() {
                 email or by our social media account.
               </div>
               <div className="flex justify-center items-center gap-8 mt-3 md:justify-start md:mt-6">
-                <FaGithub fontSize={35} color="blue" />
-                <FaFacebook fontSize={35} color="blue" />
-                <FaLinkedin fontSize={35} color="blue" />
-                <FaInstagram fontSize={35} color="blue" />
+                <a href="">
+                  <FaGithub fontSize={35} color="blue" />
+                </a>
+                <a href="">
+                  <FaFacebook fontSize={35} color="blue" />
+                </a>
+                <a href="">
+                  <FaLinkedin fontSize={35} color="blue" />
+                </a>
+                <a href="">
+                  <FaInstagram fontSize={35} color="blue" />
+                </a>
               </div>
             </div>
           </div>
