@@ -7,7 +7,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 
 export default function Portofolio() {
   const elements = ["1", "2", "3", "4", "5", "6", "7"];
