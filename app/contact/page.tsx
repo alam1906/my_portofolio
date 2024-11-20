@@ -1,12 +1,6 @@
 "use client";
 
-import {
-  FaBeer,
-  FaFacebook,
-  FaGithub,
-  FaInstagram,
-  FaLinkedin,
-} from "react-icons/fa";
+import { FaFacebook, FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 export default function Contact() {
   return (
