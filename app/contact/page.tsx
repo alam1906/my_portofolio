@@ -1,5 +1,5 @@
 "use client";
-import { motion } from "framer-motion";
+
 import {
   FaBeer,
   FaFacebook,
@@ -11,13 +11,7 @@ import {
 export default function Contact() {
   return (
     <>
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        transition={{ duration: 1 }}
-        className="h-[calc(100vh-4rem)] flex justify-center items-center w-full"
-      >
+      <div className="h-[calc(100vh-4rem)] flex justify-center items-center w-full">
         <div className="w-full">
           <h1 className="text-4xl font-bold text-center mb-10 md:mb-20">
             Contact
@@ -85,7 +79,7 @@ export default function Contact() {
             </div>
           </div>
         </div>
-      </motion.div>
+      </div>
     </>
   );
 }

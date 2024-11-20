@@ -1,14 +1,13 @@
 "use client";
-import { motion } from "framer-motion";
 
 export default function Home() {
   return (
     <>
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        transition={{ duration: 1 }}
+      <div
+        // initial={{ opacity: 0 }}
+        // animate={{ opacity: 1 }}
+        // exit={{ opacity: 0 }}
+        // transition={{ duration: 1 }}
         className="h-[calc(100vh-4rem)] flex justify-center items-center"
       >
         <div className="text-center md:text-start md:flex flex-row-reverse justify-between items-center">
@@ -42,7 +41,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </motion.div>
+      </div>
     </>
   );
 }
