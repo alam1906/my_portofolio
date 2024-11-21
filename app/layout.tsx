@@ -16,8 +16,8 @@ export default function RootLayout({
         <header className="sticky top-0 w-full h-16 backdrop-blur-sm z-50">
           <nav className="flex mx-auto justify-between items-center py-5">
             <div>
-              <Link href={"/"} className="text-black text-lg font-bold">
-                ALAM
+              <Link href={"/"} className="text-black text-2xl font-bold">
+                NA
               </Link>
             </div>
             <div className="invisible md:flex justify-between items-center gap-8 md:visible">

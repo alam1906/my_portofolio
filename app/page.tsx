@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import Typewriter from "typewriter-effect";
 
 export default function Home() {
   return (
@@ -20,11 +21,20 @@ export default function Home() {
           {/* Another */}
           <div className="md:w-2/3 lg:w-1/2">
             <h2 className="font-light text-gray-500 text-xl mb-2 tracking-widest md:mb-6 md:text-2xl xl:text-3xl">
-              Taufan Taulany
+              Nur Alam
             </h2>
-            <h1 className="font-extrabold text-4xl mb-6 md:mb-10 md:text-5xl md:font-extrabold lg:text-6xl xl:text-7xl">
-              <span className="md:block">Full Stack </span>
-              <span>Developer</span>
+            <h1 className="font-extrabold text-center text-4xl mb-6 md:mb-10 md:text-5xl md:font-extrabold md:text-start lg:text-6xl xl:text-7xl">
+              <Typewriter
+                options={{
+                  strings: [
+                    "Android Developer",
+                    "IOS Developer",
+                    "Web Developer",
+                  ],
+                  autoStart: true,
+                  loop: true,
+                }}
+              />
             </h1>
             <p className="mb-5 tracking-widest text-xs text-gray-400 md:text-sm md:mb-6 md:pr-8 lg:text-base xl:text-lg">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci
@@ -46,3 +56,5 @@ export default function Home() {
     </>
   );
 }
+
+export { Home };
