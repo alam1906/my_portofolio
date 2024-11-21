@@ -9,7 +9,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const pathName = usePathname();
-  console.log(pathName === "/");
+
   return (
     <html lang="en">
       <body className="w-5/6 mx-auto bg-gray-100 xl:w-2/3">
