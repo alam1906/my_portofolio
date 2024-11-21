@@ -66,7 +66,7 @@ export default function Certification() {
                       <div className="font-bold">Skills: </div>
                       <div className="flex flex-wrap gap-2">
                         {e.skill.map((e, index) => (
-                          <div>{e}</div>
+                          <div key={index}>{e}</div>
                         ))}
                       </div>
                     </div>
