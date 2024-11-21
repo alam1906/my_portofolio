@@ -7,9 +7,24 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function Certification() {
-  const elements = ["1", "2", "3", "4", "5", "6", "7"];
+  const elements = [
+    {
+      src: "/certificate1.jpg",
+      skill: ["Flutter", "Firebase", "Riverpod", "State Management"],
+    },
+    { src: "/certificate2.jpg", skill: ["Python", "MySql"] },
+    { src: "/certificate3.jpg", skill: ["Python", "MySql"] },
+    { src: "/certificate4.jpg", skill: ["Python", "MySql"] },
+    { src: "/certificate5.jpg", skill: ["Python", "MySql"] },
+    { src: "/certificate6.jpg", skill: ["Python", "MySql"] },
+    { src: "/certificate7.jpg", skill: ["Python", "MySql"] },
+    { src: "/certificate8.jpg", skill: ["Python", "MySql"] },
+    { src: "/certificate9.jpg", skill: ["Python", "MySql"] },
+    { src: "/certificate10.jpg", skill: ["Python", "MySql"] },
+  ];
   return (
     <>
       <motion.div
@@ -29,7 +44,16 @@ export default function Certification() {
               {elements.map((e, index) => (
                 <Card key={index} className="w-full pb-4 shadow-xl">
                   <CardHeader>
-                    <CardTitle className="bg-gray-300 w-full h-60 mb-4"></CardTitle>
+                    <CardTitle className="bg-gray-300 w-full h-60 mb-4 relative">
+                      <Image
+                        className="w-[250px] h-auto"
+                        src={e.src}
+                        alt={"tes"}
+                        fill
+                        sizes="(max-width: 768px) 250px, 400px"
+                        priority
+                      ></Image>
+                    </CardTitle>
                     <CardDescription className="mb-2">
                       <h3>
                         Full Stack Movie App Flutter and Firebase with Clean
@@ -37,13 +61,14 @@ export default function Certification() {
                       </h3>
                     </CardDescription>
                   </CardHeader>
-
                   <CardFooter>
-                    <div className="flex gap-2 mt-2">
-                      <div className="font-bold">Skills : </div>
-                      <div>Flutter.</div>
-                      <div>Firebase.</div>
-                      <div>Clean Architecture.</div>
+                    <div className="flex gap-2 mt-2 pr-4">
+                      <div className="font-bold">Skills: </div>
+                      <div className="flex flex-wrap gap-2">
+                        {e.skill.map((e, index) => (
+                          <div>{e}</div>
+                        ))}
+                      </div>
                     </div>
                   </CardFooter>
                 </Card>

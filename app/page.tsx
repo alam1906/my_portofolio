@@ -15,7 +15,7 @@ export default function Home() {
         <div className="text-center md:text-start md:flex flex-row-reverse justify-between items-center">
           {/* Image */}
           <div>
-            <div className="w-52 h-52 mb-6 bg-gray-300 rounded-full m-auto md:w-60 md:h-60 lg:w-72 lg:h-72 xl:w-96 xl:h-96"></div>
+            <div className="w-52 h-52 mb-6 bg-gray-300 rounded-full m-auto md:w-60 md:h-60 md:mb-0 lg:w-72 lg:h-72 xl:w-96 xl:h-96"></div>
           </div>
 
           {/* Another */}

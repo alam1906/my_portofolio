@@ -5,4 +5,12 @@ const nextConfig: NextConfig = {
   distDir: "build",
 };
 
+module.exports = {
+  experimental: {
+    images: {
+      unoptimized: true,
+    },
+  },
+};
+
 export default nextConfig;
