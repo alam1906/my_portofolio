@@ -20,7 +20,7 @@ export default function RootLayout({
                 NA
               </Link>
             </div>
-            <div className="invisible md:flex justify-between items-center gap-8 md:visible">
+            <div className="invisible md:flex justify-between items-center gap-12 md:visible">
               <Link
                 href={"/"}
                 className={pathName === "/" ? "active font-bold" : "font-bold"}

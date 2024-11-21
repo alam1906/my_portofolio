@@ -12,18 +12,56 @@ import Image from "next/image";
 export default function Certification() {
   const elements = [
     {
-      src: "/certificate1.jpg",
-      skill: ["Flutter", "Firebase", "Riverpod", "State Management"],
+      title: "Full Stack Flutter FlixID: Simulasi Pemesanan Tiket Bioskop",
+      src: "/certificate/certificate1.jpg",
+
+      skill: ["Flutter", "Firebase", "Riverpod"],
     },
-    { src: "/certificate2.jpg", skill: ["Python", "MySql"] },
-    { src: "/certificate3.jpg", skill: ["Python", "MySql"] },
-    { src: "/certificate4.jpg", skill: ["Python", "MySql"] },
-    { src: "/certificate5.jpg", skill: ["Python", "MySql"] },
-    { src: "/certificate6.jpg", skill: ["Python", "MySql"] },
-    { src: "/certificate7.jpg", skill: ["Python", "MySql"] },
-    { src: "/certificate8.jpg", skill: ["Python", "MySql"] },
-    { src: "/certificate9.jpg", skill: ["Python", "MySql"] },
-    { src: "/certificate10.jpg", skill: ["Python", "MySql"] },
+    {
+      title: "Data Wrangling with Python",
+      src: "/certificate/certificate2.jpg",
+      skill: ["Python", "MySql"],
+    },
+    {
+      title: "Python for Data Professional Beginner Part 1",
+      src: "/certificate/certificate3.jpg",
+      skill: ["Python", "MySql"],
+    },
+    {
+      title: "Python for Data Professional Beginner Part 2",
+      src: "/certificate/certificate4.jpg",
+      skill: ["Python", "MySql"],
+    },
+    {
+      title: "Exploratory Data Analysis with Python for Beginner",
+      src: "/certificate/certificate5.jpg",
+      skill: ["Python", "MySql"],
+    },
+    {
+      title: "Introduce Data Science with Python",
+      src: "/certificate/certificate6.jpg",
+      skill: ["Python", "MySql"],
+    },
+    {
+      title: "Python Fundamental for Data Science",
+      src: "/certificate/certificate7.jpg",
+      skill: ["Python", "MySql"],
+    },
+    {
+      title: "Python for Data Professional Beginner Part 3",
+      src: "/certificate/certificate8.jpg",
+      skill: ["Python", "MySql"],
+    },
+    {
+      title: "Fundamental SQL Using SELECT Statement",
+      src: "/certificate/certificate9.jpg",
+      skill: ["Python", "MySql"],
+    },
+    {
+      title: "Fundamental SQL Using FUNCTION and GROUP BY",
+      src: "/certificate/certificate10.jpg",
+      skill: ["Python", "MySql"],
+    },
   ];
   return (
     <>
@@ -55,10 +93,7 @@ export default function Certification() {
                       ></Image>
                     </CardTitle>
                     <CardDescription className="mb-2">
-                      <h3>
-                        Full Stack Movie App Flutter and Firebase with Clean
-                        Arhictecture Patterns and then i hae
-                      </h3>
+                      <h3>{e.title}</h3>
                     </CardDescription>
                   </CardHeader>
                   <CardFooter>

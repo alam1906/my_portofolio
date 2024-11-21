@@ -7,10 +7,27 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import Image from "next/image";
 import { motion } from "framer-motion";
 
 export default function Portofolio() {
-  const elements = ["1", "2", "3", "4", "5", "6", "7"];
+  const elements = [
+    {
+      title: "Full Stack Flutter FlixID: Simulasi Pemesanan Tiket Bioskop",
+      src: "/portofolio/portofolio1.jpg",
+      tool: ["Flutter", "Firebase", "Riverpod"],
+    },
+    {
+      title: "Web Portofolio with NextJS and Vercel Hosting",
+      src: "/portofolio/portofolio2.png",
+      tool: ["Javascript", "Tailwind CSS"],
+    },
+    {
+      title: "Web Portofolio with Flutter and Firebase Hosting",
+      src: "/portofolio/portofolio3.png",
+      tool: ["Flutter", "Firebase"],
+    },
+  ];
   return (
     <>
       <motion.div
@@ -30,9 +47,11 @@ export default function Portofolio() {
               {elements.map((e, index) => (
                 <Card key={index} className="w-full pb-4 shadow-xl">
                   <CardHeader>
-                    <CardTitle className="bg-gray-300 w-full h-60 mb-4"></CardTitle>
+                    <CardTitle className="bg-gray-300 w-full h-60 mb-4 relative">
+                      <Image src={e.src} alt={""} fill></Image>
+                    </CardTitle>
                     <CardDescription className="mb-2">
-                      <h3>Aplikasi Komunitas Catur Tasikmalaya</h3>
+                      <h3>{e.title}</h3>
                     </CardDescription>
                   </CardHeader>
                   <CardContent className="mb-2">
