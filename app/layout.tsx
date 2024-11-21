@@ -1,11 +1,15 @@
+"use client";
 import Link from "next/link";
 import "./globals.css";
+import { usePathname } from "next/navigation";
 
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const pathName = usePathname();
+  console.log(pathName === "/");
   return (
     <html lang="en">
       <body className="w-5/6 mx-auto bg-gray-100 xl:w-2/3">
@@ -19,25 +23,33 @@ export default function RootLayout({
             <div className="invisible md:flex justify-between items-center gap-8 md:visible">
               <Link
                 href={"/"}
-                className="hover:text-blue-500 focus:text-blue-500 font-bold text-gray-900"
+                className={pathName === "/" ? "active font-bold" : "font-bold"}
               >
                 Home
               </Link>
               <Link
-                href={"portofolio"}
-                className="hover:text-blue-500 focus:text-blue-500 font-bold text-gray-900"
+                href={"/portofolio"}
+                className={
+                  pathName === "/portofolio" ? "active font-bold" : "font-bold"
+                }
               >
                 Portofolio
               </Link>
               <Link
                 href={"/certification"}
-                className="hover:text-blue-500 focus:text-blue-500 font-bold text-gray-900"
+                className={
+                  pathName === "/certification"
+                    ? "active font-bold"
+                    : "font-bold"
+                }
               >
                 Certification
               </Link>
               <Link
                 href={"/contact"}
-                className="hover:text-blue-500 focus:text-blue-500 font-bold text-gray-900"
+                className={
+                  pathName === "/contact" ? "active font-bold" : "font-bold"
+                }
               >
                 Contact
               </Link>
