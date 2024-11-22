@@ -52,11 +52,14 @@ export default function Home() {
               and clean architecture.
             </p>
             <div className="flex justify-center gap-6 md:justify-start">
-              <Link href="https://drive.google.com/file/d/1dgtMpXD7hfdHWOgjbWlCbhzZJrNsYTow/view?usp=drive_link">
-                <button className="px-6 py-2 bg-gray-900 rounded-xl mt-4 text-white text-sm xl:px-10 xl:py-3 hover:bg-gray-700">
-                  Download CV
-                </button>
-              </Link>
+              <a
+                href="https://drive.google.com/file/d/1dgtMpXD7hfdHWOgjbWlCbhzZJrNsYTow/view?usp=drive_link"
+                target="blank"
+                className="px-6 py-2 bg-gray-900 rounded-xl mt-4 text-white text-sm xl:px-10 xl:py-3 hover:bg-gray-700"
+              >
+                Download CV
+              </a>
+
               <Link href={"/contact"}>
                 <button className="px-6 py-2 bg-white rounded-xl mt-4 border border-gray-900 text-sm xl:px-10 xl:py-3 hover:bg-gray-200">
                   Contact Me

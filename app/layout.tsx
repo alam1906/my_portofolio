@@ -12,6 +12,7 @@ export default function RootLayout({
 
   return (
     <html lang="en">
+      <title>My Portofolio</title>
       <body className="w-5/6 mx-auto bg-gray-100 xl:w-2/3">
         <header className="sticky top-0 w-full h-16 backdrop-blur-sm z-50">
           <nav className="flex mx-auto justify-between items-center py-5">
