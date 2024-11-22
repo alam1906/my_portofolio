@@ -71,16 +71,19 @@ export default function Contact() {
                 email or by our social media account.
               </div>
               <div className="flex justify-center items-center gap-8 mt-3 md:justify-start md:mt-6">
-                <a href="https://github.com/alam1906" target="blank">
+                <a href="https://github.com/alam1906" target="blank1">
                   <FaGithub fontSize={35} color="blue" />
                 </a>
-                <a href="https://github.com/alam1906" target="blank">
+                <a href="https://github.com/alam1906" target="blank2">
                   <FaFacebook fontSize={35} color="blue" />
                 </a>
-                <a href="https://github.com/alam1906" target="blank">
+                <a
+                  href="https://www.linkedin.com/in/nur-alam-26460a240/"
+                  target="blank3"
+                >
                   <FaLinkedin fontSize={35} color="blue" />
                 </a>
-                <a href="https://github.com/alam1906" target="blank">
+                <a href="https://www.instagram.com/nur.alam_x" target="blank4">
                   <FaInstagram fontSize={35} color="blue" />
                 </a>
               </div>

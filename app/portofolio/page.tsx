@@ -77,7 +77,7 @@ export default function Portofolio() {
                       </a>
                       <a
                         href={e.github}
-                        target="blank"
+                        target={index.toString()}
                         className="px-5 py-2 bg-white w-full rounded-lg text-center font-bold text-blue-700 cursor-pointer"
                       >
                         Github
