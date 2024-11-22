@@ -20,47 +20,47 @@ export default function Certification() {
     {
       title: "Data Wrangling with Python",
       src: "/certificate/certificate2.jpg",
-      skill: ["Python", "MySql"],
+      skill: ["Python"],
     },
     {
       title: "Python for Data Professional Beginner Part 1",
       src: "/certificate/certificate3.jpg",
-      skill: ["Python", "MySql"],
+      skill: ["Python"],
     },
     {
       title: "Python for Data Professional Beginner Part 2",
       src: "/certificate/certificate4.jpg",
-      skill: ["Python", "MySql"],
+      skill: ["Python"],
     },
     {
       title: "Exploratory Data Analysis with Python for Beginner",
       src: "/certificate/certificate5.jpg",
-      skill: ["Python", "MySql"],
+      skill: ["Python"],
     },
     {
       title: "Introduce Data Science with Python",
       src: "/certificate/certificate6.jpg",
-      skill: ["Python", "MySql"],
+      skill: ["Python"],
     },
     {
       title: "Python Fundamental for Data Science",
       src: "/certificate/certificate7.jpg",
-      skill: ["Python", "MySql"],
+      skill: ["Python"],
     },
     {
       title: "Python for Data Professional Beginner Part 3",
       src: "/certificate/certificate8.jpg",
-      skill: ["Python", "MySql"],
+      skill: ["Python"],
     },
     {
       title: "Fundamental SQL Using SELECT Statement",
       src: "/certificate/certificate9.jpg",
-      skill: ["Python", "MySql"],
+      skill: ["MySql"],
     },
     {
       title: "Fundamental SQL Using FUNCTION and GROUP BY",
       src: "/certificate/certificate10.jpg",
-      skill: ["Python", "MySql"],
+      skill: ["MySql"],
     },
   ];
   return (

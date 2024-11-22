@@ -9,23 +9,33 @@ import {
 } from "@/components/ui/card";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function Portofolio() {
   const elements = [
     {
-      title: "Full Stack Flutter FlixID: Simulasi Pemesanan Tiket Bioskop",
+      title: "Aplikasi Komunitas Catur Kabupaten Tasikmalaya",
       src: "/portofolio/portofolio1.jpg",
-      tool: ["Flutter", "Firebase", "Riverpod"],
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit.Aut ipsum nam fugiat quisquam, enim provident iusto eosullam dolorum officiis ea rem natus. Iusto incidunt non omnis veniam facilis numquam?",
+      preview: "https://github.com/alam1906/percasi_tasikmalaya",
+      github: "https://github.com/alam1906/percasi_tasikmalaya",
     },
     {
       title: "Web Portofolio with NextJS and Vercel Hosting",
       src: "/portofolio/portofolio2.png",
-      tool: ["Javascript", "Tailwind CSS"],
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit.Aut ipsum nam fugiat quisquam, enim provident iusto eosullam dolorum officiis ea rem natus. Iusto incidunt non omnis veniam facilis numquam?",
+      preview: "https://my-portofolio-smoky-rho.vercel.app",
+      github: "https://github.com/alam1906/my_portofolio",
     },
     {
       title: "Web Portofolio with Flutter and Firebase Hosting",
       src: "/portofolio/portofolio3.png",
-      tool: ["Flutter", "Firebase"],
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit.Aut ipsum nam fugiat quisquam, enim provident iusto eosullam dolorum officiis ea rem natus. Iusto incidunt non omnis veniam facilis numquam?",
+      preview: "https://myportofolio-36d44.web.app",
+      github: "https://github.com/alam1906/my_portofolio_flutter",
     },
   ];
   return (
@@ -54,19 +64,25 @@ export default function Portofolio() {
                       <h3>{e.title}</h3>
                     </CardDescription>
                   </CardHeader>
-                  <CardContent className="mb-2">
-                    <p>
-                      Dibuat menggunakan framework flutter dengan menerapkan
-                      clean architecture sehingga code lebih mudah dibaca dan di
-                      maintain.
-                    </p>
+                  <CardContent className="mb-5">
+                    <p className="text-gray-600">{e.description}</p>
                   </CardContent>
                   <CardFooter>
-                    <div className="px-5 py-2 bg-gray-300 rounded-xl">
-                      Flutter
-                    </div>
-                    <div className="px-5 py-2 bg-gray-300 rounded-xl">
-                      Firebase
+                    <div className="flex justify-center items-center mx-auto gap-4 w-full pr-5">
+                      <a
+                        href={e.preview}
+                        target="blank"
+                        className="px-5 py-2 bg-blue-700 w-full rounded-lg text-center font-bold text-white cursor-pointer"
+                      >
+                        Preview
+                      </a>
+                      <a
+                        href={e.github}
+                        target="blank"
+                        className="px-5 py-2 bg-white w-full rounded-lg text-center font-bold text-blue-700 cursor-pointer"
+                      >
+                        Github
+                      </a>
                     </div>
                   </CardFooter>
                 </Card>

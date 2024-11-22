@@ -13,7 +13,7 @@ export default function Contact() {
         className="h-[calc(100vh-4rem)] flex justify-center items-center w-full"
       >
         <div className="w-full">
-          <h1 className="text-4xl font-bold text-center mb-10 md:mb-20">
+          <h1 className="text-4xl font-extrabold text-center mb-10 md:mb-20">
             Contact
           </h1>
           <div className="md:flex flex-row-reverse justify-between">
@@ -71,16 +71,16 @@ export default function Contact() {
                 email or by our social media account.
               </div>
               <div className="flex justify-center items-center gap-8 mt-3 md:justify-start md:mt-6">
-                <a href="">
+                <a href="https://github.com/alam1906" target="blank">
                   <FaGithub fontSize={35} color="blue" />
                 </a>
-                <a href="">
+                <a href="https://github.com/alam1906" target="blank">
                   <FaFacebook fontSize={35} color="blue" />
                 </a>
-                <a href="">
+                <a href="https://github.com/alam1906" target="blank">
                   <FaLinkedin fontSize={35} color="blue" />
                 </a>
-                <a href="">
+                <a href="https://github.com/alam1906" target="blank">
                   <FaInstagram fontSize={35} color="blue" />
                 </a>
               </div>

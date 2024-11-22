@@ -25,7 +25,7 @@ export default function RootLayout({
                 href={"/"}
                 className={pathName === "/" ? "active font-bold" : "font-bold"}
               >
-                Home
+                About
               </Link>
               <Link
                 href={"/portofolio"}

@@ -1,6 +1,8 @@
 "use client";
 import { motion } from "framer-motion";
+import Link from "next/link";
 import Typewriter from "typewriter-effect";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -15,7 +17,14 @@ export default function Home() {
         <div className="text-center md:text-start md:flex flex-row-reverse justify-between items-center">
           {/* Image */}
           <div>
-            <div className="w-52 h-52 mb-6 bg-gray-300 rounded-full m-auto md:w-60 md:h-60 md:mb-0 lg:w-72 lg:h-72 xl:w-96 xl:h-96"></div>
+            <div className="w-52 h-52 mb-6 relative bg-gray-200 rounded-full m-auto md:w-60 md:h-60 md:mb-0 lg:w-72 lg:h-72 xl:w-96 xl:h-96">
+              <Image
+                src={"/profile/profile.jpg"}
+                alt={""}
+                fill
+                className="rounded-full"
+              ></Image>
+            </div>
           </div>
 
           {/* Another */}
@@ -37,18 +46,22 @@ export default function Home() {
               />
             </h1>
             <p className="mb-5 tracking-widest text-xs text-gray-400 md:text-sm md:mb-6 md:pr-8 lg:text-base xl:text-lg">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci
-              eaque odio rerum eveniet! Doloribus, sunt et facilis qui voluptas
-              fugit quae magni hic accusantium optio suscipit incidunt error
-              reiciendis possimus.
+              I'm a Front End Developer with a good understanding of Flutter and
+              React JS framework, I have experience in UI design, API
+              integration, clean code writing and knowledge of solid principles
+              and clean architecture.
             </p>
             <div className="flex justify-center gap-6 md:justify-start">
-              <button className="px-6 py-2 bg-gray-900 rounded-xl mt-4 text-white text-sm xl:px-10 xl:py-3 hover:bg-gray-700">
-                Download CV
-              </button>
-              <button className="px-6 py-2 bg-white rounded-xl mt-4 border border-gray-900 text-sm xl:px-10 xl:py-3 hover:bg-gray-200">
-                Contact Me
-              </button>
+              <Link href="https://drive.google.com/file/d/1dgtMpXD7hfdHWOgjbWlCbhzZJrNsYTow/view?usp=drive_link">
+                <button className="px-6 py-2 bg-gray-900 rounded-xl mt-4 text-white text-sm xl:px-10 xl:py-3 hover:bg-gray-700">
+                  Download CV
+                </button>
+              </Link>
+              <Link href={"/contact"}>
+                <button className="px-6 py-2 bg-white rounded-xl mt-4 border border-gray-900 text-sm xl:px-10 xl:py-3 hover:bg-gray-200">
+                  Contact Me
+                </button>
+              </Link>
             </div>
           </div>
         </div>
