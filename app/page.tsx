@@ -46,8 +46,8 @@ export default function Home() {
               />
             </h1>
             <p className="mb-5 tracking-widest text-xs text-gray-400 md:text-sm md:mb-6 md:pr-8 lg:text-base xl:text-lg">
-              I'm a Front End Developer with a good understanding of Flutter and
-              React JS framework, I have experience in UI design, API
+              I am a Front End Developer with a good understanding of Flutter
+              and React JS framework, I have experience in UI design, API
               integration, clean code writing and knowledge of solid principles
               and clean architecture.
             </p>
