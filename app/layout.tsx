@@ -44,14 +44,15 @@ export default function RootLayout({
     setTimeout(() => {
       id2?.classList.remove("invisible");
       navigation?.classList.add("hidden");
+      document.body.classList.remove("overflow-y-hidden");
     }, 350);
   }
 
   return (
     <html lang="en">
       <title>My Portofolio</title>
-      <body className="w-5/6 mx-auto bg-white xl:w-2/3">
-        <header className="sticky top-0 w-full h-16 backdrop-blur-sm z-50">
+      <body className="w-5/6 mx-auto  bg-gray-100 xl:w-2/3">
+        <header className="sticky top-0 w-full h-16 backdrop-blur-sm z-50 ">
           <nav className="flex mx-auto justify-between items-center py-5">
             <div>
               <Link href={"/"} className="text-black text-2xl font-bold">
@@ -113,7 +114,7 @@ export default function RootLayout({
           </nav>
         </header>
         <section
-          className="hidden text-center absolute z-50 backdrop-blur-sm w-full h-screen right-0 bg-white md:hidden"
+          className="hidden text-center fixed z-50 backdrop-blur-sm w-full h-screen right-0 bg-gray-100 md:hidden"
           id="navigation"
         >
           <div className="flex flex-col gap-6">

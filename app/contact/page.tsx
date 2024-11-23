@@ -10,9 +10,9 @@ export default function Contact() {
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         transition={{ duration: 1 }}
-        className="h-[calc(100vh-4rem)] flex justify-center items-center w-full"
+        className="h-[calc(100dvh-4rem)] flex justify-center items-start w-full md:items-center mt-5 md:mt-0"
       >
-        <div className="w-full">
+        <div className="w-full ">
           <h1 className="text-4xl font-extrabold text-center mb-10 md:mb-20">
             Contact
           </h1>
