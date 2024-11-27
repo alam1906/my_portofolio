@@ -22,7 +22,10 @@ export default function RootLayout({
         <header className="sticky top-0 w-full h-16 bg-gray-100 z-50">
           <nav className="flex mx-auto justify-between items-center py-5">
             <div>
-              <Link href={"/"} className="text-black text-2xl font-bold ml-5">
+              <Link
+                href={"/"}
+                className="text-black text-2xl font-bold ml-5 md:ml-0"
+              >
                 NA
               </Link>
             </div>
