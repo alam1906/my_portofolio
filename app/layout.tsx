@@ -2,60 +2,27 @@
 import Link from "next/link";
 import "./globals.css";
 import { usePathname } from "next/navigation";
+import { useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import { FaGripLines, FaTimes } from "react-icons/fa";
 
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const [open, setOpen] = useState(false);
   const pathName = usePathname();
-  let isTrue = true;
-  function handleClick() {
-    console.log(isTrue);
-    const navigation = document.getElementById("navigation");
-    const id1 = document.getElementById("1");
-    const id2 = document.getElementById("2");
-    const id3 = document.getElementById("3");
-    if (isTrue === true) {
-      id1?.classList.add("rotate-45");
-      id3?.classList.add("-rotate-45");
-      id2?.classList.add("invisible");
-      navigation?.classList.remove("hidden");
-      window.scrollTo({ top: 0 });
-      document.body.classList.add("overflow-y-hidden");
-      isTrue = !isTrue;
-    } else {
-      id1?.classList.remove("rotate-45");
-      id3?.classList.remove("-rotate-45");
-      id2?.classList.remove("invisible");
-      navigation?.classList.add("hidden");
-      document.body.classList.remove("overflow-y-hidden");
-      isTrue = !isTrue;
-    }
-  }
-
-  function unHide() {
-    const navigation = document.getElementById("navigation");
-    const id1 = document.getElementById("1");
-    const id2 = document.getElementById("2");
-    const id3 = document.getElementById("3");
-    id1?.classList.remove("rotate-45");
-    id3?.classList.remove("-rotate-45");
-    setTimeout(() => {
-      id2?.classList.remove("invisible");
-      navigation?.classList.add("hidden");
-      document.body.classList.remove("overflow-y-hidden");
-    }, 350);
-  }
+  console.log(open);
 
   return (
     <html lang="en">
       <title>My Portofolio</title>
-      <body className="w-5/6 mx-auto  bg-gray-100 xl:w-2/3">
-        <header className="sticky top-0 w-full h-16 backdrop-blur-sm z-50 ">
+      <body className="w-full bg-gray-100 md:container">
+        <header className="sticky top-0 w-full h-16 bg-gray-100 z-50">
           <nav className="flex mx-auto justify-between items-center py-5">
             <div>
-              <Link href={"/"} className="text-black text-2xl font-bold">
+              <Link href={"/"} className="text-black text-2xl font-bold ml-5">
                 NA
               </Link>
             </div>
@@ -95,75 +62,98 @@ export default function RootLayout({
             </div>
             <div
               id="menu"
-              className="visible block cursor-pointer md:invisible md:hidden"
-              onClick={handleClick}
+              className="visible mr-5 block cursor-pointer md:invisible md:hidden"
+              onClick={() => {
+                setOpen(!open);
+              }}
             >
-              <span
-                className="w-[30px] h-[2px] my-2 block bg-black transition duration-300 ease-in-out origin-bottom-left"
-                id="1"
-              ></span>
-              <span
-                className="w-[30px] h-[2px] my-2 block bg-black transition duration-0 ease-in-out origin-bottom-left"
-                id="2"
-              ></span>
-              <span
-                className="w-[30px] h-[2px] my-2 block bg-black transition duration-300 ease-in-out origin-bottom-left"
-                id="3"
-              ></span>
+              {open === false && (
+                <div className="text-3xl transition duration-1000">
+                  <FaGripLines></FaGripLines>
+                </div>
+              )}
+              {open === true && (
+                <div className="text-3xl transition duration-1000">
+                  <FaTimes></FaTimes>
+                </div>
+              )}
             </div>
           </nav>
         </header>
-        <section
-          className="hidden text-center fixed z-50 backdrop-blur-sm w-full h-screen right-0 bg-gray-100 md:hidden"
-          id="navigation"
-        >
-          <div className="flex flex-col gap-6">
-            <Link
-              onClick={unHide}
-              href={"/"}
-              className={
-                pathName === "/"
-                  ? "active font-bold block text-2xl"
-                  : "font-bold block text-2xl"
-              }
+
+        <AnimatePresence mode="wait">
+          {open && (
+            <motion.div
+              initial={{ opacity: 0, y: -14 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -14 }}
+              transition={{ duration: 0.3 }}
+              className=" fixed top-16 left-0 w-full z-20 md:hidden"
             >
-              About
-            </Link>
-            <Link
-              onClick={unHide}
-              href={"/portofolio"}
-              className={
-                pathName === "/portofolio"
-                  ? "active font-bold block text-2xl"
-                  : "font-bold block text-2xl"
-              }
-            >
-              Portofolio
-            </Link>
-            <Link
-              onClick={unHide}
-              href={"/certification"}
-              className={
-                pathName === "/certification"
-                  ? "active font-bold block text-2xl"
-                  : "font-bold block text-2xl"
-              }
-            >
-              Certification
-            </Link>
-            <Link
-              onClick={unHide}
-              href={"/contact"}
-              className={
-                pathName === "/contact"
-                  ? "active font-bold block text-2xl"
-                  : "font-bold block text-2xl"
-              }
-            >
-              Contact
-            </Link>
-          </div>
-        </section>
+              <div className=" font-bold text-xl uppercase bg-gray-100 text-black pb-5">
+                <ul className="flex flex-col justify-center items-center gap-10">
+                  <Link
+                    onClick={() =>
+                      setTimeout(() => {
+                        setOpen(!open);
+                      }, 100)
+                    }
+                    href={"/"}
+                    className={
+                      pathName === "/" ? "active font-bold" : "font-bold"
+                    }
+                  >
+                    Home
+                  </Link>
+                  <Link
+                    onClick={() =>
+                      setTimeout(() => {
+                        setOpen(!open);
+                      }, 100)
+                    }
+                    href={"/portofolio"}
+                    className={
+                      pathName === "/portofolio"
+                        ? "active font-bold"
+                        : "font-bold"
+                    }
+                  >
+                    Portofolio
+                  </Link>
+                  <Link
+                    onClick={() =>
+                      setTimeout(() => {
+                        setOpen(!open);
+                      }, 100)
+                    }
+                    href={"/certification"}
+                    className={
+                      pathName === "/certification"
+                        ? "active font-bold"
+                        : "font-bold"
+                    }
+                  >
+                    Certification
+                  </Link>
+                  <Link
+                    onClick={() =>
+                      setTimeout(() => {
+                        setOpen(!open);
+                      }, 100)
+                    }
+                    href={"/contact"}
+                    className={
+                      pathName === "/contact" ? "active font-bold" : "font-bold"
+                    }
+                  >
+                    Contact
+                  </Link>
+                </ul>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+
         {children}
         {/* <footer>
           <div className="bg-gray-900 h-60"></div>

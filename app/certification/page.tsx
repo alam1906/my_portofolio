@@ -72,12 +72,12 @@ export default function Certification() {
         transition={{ duration: 1 }}
         className=" mt-5"
       >
-        <h1 className="text-4xl font-extrabold text-center mb-10">
+        <h1 className="text-4xl font-extrabold text-center mb-10 mx-7">
           Certificate and License
         </h1>
 
         <div className="flex w-full justify-center items-center">
-          <div className="">
+          <div className="mx-5 md:mx-0">
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3">
               {elements.map((e, index) => (
                 <Card key={index} className="w-full pb-4 shadow-xl">

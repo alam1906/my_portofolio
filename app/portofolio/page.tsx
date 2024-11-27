@@ -44,7 +44,7 @@ export default function Portofolio() {
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         transition={{ duration: 1 }}
-        className=" mt-5"
+        className="mt-5 mx-5 md:mx-0"
       >
         <h1 className="text-4xl font-extrabold text-center mb-10">
           Portofolio

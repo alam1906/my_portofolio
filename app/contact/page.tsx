@@ -12,7 +12,7 @@ export default function Contact() {
         transition={{ duration: 1 }}
         className="h-[calc(100dvh-4rem)] flex justify-center items-start w-full md:items-center mt-5 md:mt-0"
       >
-        <div className="w-full ">
+        <div className="w-full mx-5 md:mx-0">
           <h1 className="text-4xl font-extrabold text-center mb-10 md:mb-20">
             Contact
           </h1>

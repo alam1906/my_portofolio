@@ -12,7 +12,7 @@ export default function Home() {
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         transition={{ duration: 1 }}
-        className="h-[calc(100dvh-4rem)] flex justify-center items-center"
+        className="h-[calc(100dvh-4rem)] flex justify-center items-center mx-5 md:mx-0"
       >
         <div className="text-center md:text-start md:flex flex-row-reverse justify-between items-center">
           {/* Image */}
